@@ -82,6 +82,22 @@ console.log(isCard('10h')); // false -- rank 10 must be represented as "T"
 console.log(isCard('hello')); // false
 ```
 
+#### `assertCard`
+
+A more rigid implementation of `isCard`, throwing if the provided string value is not a valid representation of a `Card`.
+
+```ts
+const cards = ['As', 'Kd', '5h', '2c'].map(assertCard);
+// `cards` is typed as `Card[]` with all values provided
+
+try {
+  assertCard('10c');
+} catch (err) {
+  console.log(err);
+}
+// outputs error of type `InvalidCardError` with message: Invalid card: "10c"
+```
+
 #### `getRank`
 
 Extracts the `Rank` type value from a `Card`.

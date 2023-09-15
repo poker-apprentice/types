@@ -1,4 +1,5 @@
 export { ALL_CARDS, ALL_RANKS, ALL_SUITS } from './constants';
+export { assertCard } from './assertCard';
 export { getRank } from './getRank';
 export { getSuit } from './getSuit';
 export { InvalidCardError } from './InvalidCardError';
