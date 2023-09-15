@@ -1,0 +1,57 @@
+{
+  "name": "@poker-apprentice/types",
+  "version": "0.0.0",
+  "description": "A collection of TypeScript types and basic introspection functions pertaining to a deck of cards",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "repository": "https://github.com/poker-apprentice/types",
+  "author": "Matt Huggins <matt.huggins@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "poker",
+    "poker hand",
+    "holdem",
+    "casino",
+    "cards",
+    "deck of cards"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn build:types && yarn build:rollup",
+    "build:types": "tsc -b .",
+    "build:rollup": "cross-env NODE_ENV=production rollup -c",
+    "clean": "rimraf dist",
+    "lint": "eslint src",
+    "lint:fix": "yarn lint src --fix",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "test": "cross-env NODE_ENV=test jest",
+    "prepublishOnly": "yarn clean && yarn lint && yarn format && yarn test && yarn build"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.15",
+    "@babel/preset-env": "^7.22.15",
+    "@babel/preset-typescript": "^7.22.15",
+    "@babel/runtime": "^7.22.15",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@types/jest": "^29.5.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jsdoc": "^46.8.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "rollup": "^3.29.1",
+    "typescript": "^5.2.2"
+  }
+}
