@@ -10,7 +10,7 @@ import type { Card, Suit } from './types';
  */
 export const getSuit = (card: string): Suit => {
   if (!isCard(card)) {
-    throw new InvalidCardError();
+    throw new InvalidCardError(card);
   }
   return card[1] as Suit;
 };

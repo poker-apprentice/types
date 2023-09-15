@@ -10,7 +10,7 @@ import type { Card } from './types';
  */
 export const assertCard = (card: string): card is Card => {
   if (!isCard(card)) {
-    throw new InvalidCardError();
+    throw new InvalidCardError(card);
   }
   return true;
 };

@@ -10,7 +10,7 @@ import type { Card, Rank } from './types';
  */
 export const getRank = (card: string): Rank => {
   if (!isCard(card)) {
-    throw new InvalidCardError();
+    throw new InvalidCardError(card);
   }
   return card[0] as Rank;
 };
