@@ -44,7 +44,7 @@ const suit: Suit = 'c'; // clubs
 
 #### `Card`
 
-Any string that represents a card (i.e.: a rank and suit combined).
+A 2-character string representing the rank & suit of a card. (e.g.: "Ts" for the 10 of spades).
 
 ```ts
 import type { Card } from '@poker-apprentice/types';
