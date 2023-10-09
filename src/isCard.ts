@@ -7,4 +7,6 @@ import type { Card } from './types';
  * @returns {boolean} True if `str` represents a valid {@link Card} type, false otherwise.
  */
 export const isCard = (str: string): str is Card =>
-  str.length === 2 && ALL_RANKS.includes(str[0]) && ALL_SUITS.includes(str[1]);
+  str.length === 2 &&
+  ALL_RANKS.some((rank) => rank === str[0]) &&
+  ALL_SUITS.some((suit) => suit === str[1]);
