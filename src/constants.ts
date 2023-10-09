@@ -15,7 +15,7 @@ const exhaustiveStringTuple =
   ) =>
     x;
 
-export const ALL_RANKS: Rank[] = exhaustiveStringTuple<Rank>()(
+export const ALL_RANKS = exhaustiveStringTuple<Rank>()(
   '2',
   '3',
   '4',
@@ -31,7 +31,7 @@ export const ALL_RANKS: Rank[] = exhaustiveStringTuple<Rank>()(
   'A',
 );
 
-export const ALL_SUITS: Suit[] = exhaustiveStringTuple<Suit>()('c', 'd', 'h', 's');
+export const ALL_SUITS = exhaustiveStringTuple<Suit>()('c', 'd', 'h', 's');
 
 export const ALL_CARDS = ALL_RANKS.reduce((acc: Card[], rank) => {
   acc.push(...ALL_SUITS.map((suit) => `${rank}${suit}` as Card));
