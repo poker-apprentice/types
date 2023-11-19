@@ -110,7 +110,7 @@ console.log(isCard('hello')); // false
 
 #### `assertCard`
 
-A more rigid implementation of `isCard`, throwing if the provided string value is not a valid representation of a `Card`.
+A more rigid implementation of `isCard`, throwing if the provided string value is not a valid representation of a `Card`, and acting as an [assertion type guard](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions).
 
 ```ts
 const cards = ['As', 'Kd', '5h', '2c'].map(assertCard);
