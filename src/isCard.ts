@@ -1,4 +1,5 @@
-import { ALL_RANKS, ALL_SUITS } from './constants';
+import { isRank } from './isRank';
+import { isSuit } from './isSuit';
 import type { Card } from './types';
 
 /**
@@ -7,6 +8,4 @@ import type { Card } from './types';
  * @returns {boolean} True if `str` represents a valid {@link Card} type, false otherwise.
  */
 export const isCard = (str: string): str is Card =>
-  str.length === 2 &&
-  ALL_RANKS.some((rank) => rank === str[0]) &&
-  ALL_SUITS.some((suit) => suit === str[1]);
+  str.length === 2 && isRank(str[0]) && isSuit(str[1]);

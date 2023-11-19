@@ -68,6 +68,32 @@ const hand: Hand = [
 
 ### Functions
 
+#### `isRank`
+
+Determines if a string is a valid representation of a `Rank`, acting as a [type guard](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates).
+
+```ts
+console.log(isRank('A')); // true
+console.log(isRank('K')); // true
+
+console.log(isRank('a')); // false -- only uppercase "A" accepted as rank
+console.log(isRank('P')); // false -- "P" is not a rank
+console.log(isRank('hello')); // false
+```
+
+#### `isSuit`
+
+Determines if a string is a valid representation of a `Suit`, acting as a [type guard](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates).
+
+```ts
+console.log(isSuit('s')); // true
+console.log(isSuit('d')); // true
+
+console.log(isSuit('S')); // false -- only lowercase "s" accepted as rank
+console.log(isSuit('p')); // false -- "p" is not a suit
+console.log(isSuit('hello')); // false
+```
+
 #### `isCard`
 
 Determines if a string is a valid representation of a `Card`, acting as a [type guard](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates).
