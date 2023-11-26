@@ -17,3 +17,19 @@ export type Card = `${Rank}${Suit}`;
  * An array of cards representing a player's hand.
  */
 export type Hand = Card[];
+
+/**
+ * All possible high hand strengths in a standard game of poker.
+ */
+export enum HandStrength {
+  HighCard = 0,
+  OnePair = 1,
+  TwoPair = 2,
+  ThreeOfAKind = 3,
+  Straight = 4,
+  Flush = 5,
+  FullHouse = 6,
+  FourOfAKind = 7,
+  StraightFlush = 8,
+  RoyalFlush = 9,
+}

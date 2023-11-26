@@ -66,6 +66,24 @@ const hand: Hand = [
 ];
 ```
 
+#### `HandStrength`
+
+All possible high hand strengths in a standard game of poker.
+
+```ts
+import { HandStrength } from '@poker-apprentice/types';
+console.log(HandStrength.HighCard);      // 0
+console.log(HandStrength.OnePair);       // 1
+console.log(HandStrength.TwoPair);       // 2
+console.log(HandStrength.ThreeOfAKind);  // 3
+console.log(HandStrength.Straight);      // 4
+console.log(HandStrength.Flush);         // 5
+console.log(HandStrength.FullHouse);     // 6
+console.log(HandStrength.FourOfAKind);   // 7
+console.log(HandStrength.StraightFlush); // 8
+console.log(HandStrength.RoyalFlush);    // 9
+```
+
 ### Functions
 
 #### `isRank`

@@ -6,4 +6,4 @@ export { InvalidCardError } from './InvalidCardError';
 export { isCard } from './isCard';
 export { isRank } from './isRank';
 export { isSuit } from './isSuit';
-export type * from './types';
+export * from './types';
