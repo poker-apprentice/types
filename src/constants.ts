@@ -12,7 +12,7 @@ const exhaustiveStringTuple =
       : Exclude<T, L[number]> extends never
       ? L
       : Exclude<T, L[number]>[]
-  ): T[] =>
+  ) =>
     x;
 
 export const ALL_RANKS = exhaustiveStringTuple<Rank>()(
